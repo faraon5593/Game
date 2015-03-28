@@ -13,7 +13,10 @@ namespace Game.Controllers
         dbContext _db = new dbContext();
         public ActionResult Index()
         {
-            var model = _db.Mapy.Where(r => r.Username == User.Identity.Name).First();
+            var mapa = _db.Mapy.Where(r => r.Username == User.Identity.Name).First();
+            var budynki = _db.Budynki.ToList();
+            ViewBag.Mapa = mapa;
+           
             return View(model);
         }
 
