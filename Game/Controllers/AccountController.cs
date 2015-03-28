@@ -83,6 +83,11 @@ namespace Game.Controllers
                 if (result.Succeeded)
                 {
                     await SignInAsync(user, isPersistent: false);
+                    using (var _db = new dbContext())
+                    {
+                        _db.Mapy.Add(new Maps { Height = 10, Width = 10, Username = model.UserName});
+                        _db.SaveChanges();
+                    }
                     return RedirectToAction("Index", "Home");
                 }
                 else

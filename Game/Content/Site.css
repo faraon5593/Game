@@ -40,3 +40,16 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+/*mapa*/
+
+.mapa_trawa {
+    width : 50px;
+    height : 50px;
+    border: solid 1px;
+    background-image: url(http://preview.turbosquid.com/Preview/2014/08/01__14_02_41/grasstile03.jpg83320455-db4e-42cb-b185-c59c535afdd1Small.jpg);
+}
+.mapa_trawa:hover {
+    -webkit-filter: brightness(0.8);
+    filter: brightness(0.8);
+}

@@ -7,14 +7,14 @@ using Game.Models;
 
 namespace Game.Controllers
 {
+    [Authorize] 
     public class HomeController : Controller
     {
         dbContext _db = new dbContext();
         public ActionResult Index()
         {
-            _db.Budynki.Add(new Buildings { Destr_price = 10, Name = "Tartak", Height = 1, Percent_price_per_lvl = 110, Percent_product_per_lvl = 120, Price = 100, Product_per_h = 3, Width = 1 });
-            _db.SaveChanges();
-            return View();
+            var model = _db.Mapy.Where(r => r.Username == User.Identity.Name).First();
+            return View(model);
         }
 
         public ActionResult About()
