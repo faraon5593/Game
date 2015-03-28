@@ -13,5 +13,11 @@ namespace Game.Models
         public DbSet<Products> Produkty { get; set; }
         public DbSet<UserBuildings> BudynkiUzytkownika { get; set; }
         public DbSet<UserProducts> ProduktyUzytkownika { get; set; }
+
+        public dbContext()
+            :base ("DefaultConnection")
+        {
+
+        }
     }
 }

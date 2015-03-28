@@ -1,6 +1,5 @@
 namespace Game.Migrations
 {
-    using Game.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -11,18 +10,22 @@ namespace Game.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "Game.Models.dbContext";
         }
 
         protected override void Seed(Game.Models.dbContext context)
         {
-            
-                context.Budynki.AddOrUpdate(                 
-                    p => p.ID,
-                    new Buildings { Name = "Tartak", Height = 2, Width = 2, Price = 100, Destr_price = 30, Percent_price_per_lvl = 110, Percent_product_per_lvl = 120, Product_per_h = 10},
-                    new Buildings { Name = "Kopalnia wêgla", Height = 3, Width = 3, Price = 1000, Destr_price = 200, Percent_price_per_lvl = 120, Percent_product_per_lvl = 130, Product_per_h = 10}
-               );
+            //  This method will be called after migrating to the latest version.
 
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data. E.g.
+            //
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
+            //
         }
     }
 }

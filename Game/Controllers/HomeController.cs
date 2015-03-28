@@ -17,7 +17,7 @@ namespace Game.Controllers
             var budynki = _db.Budynki.ToList();
             ViewBag.Mapa = mapa;
            
-            return View(model);
+            return View(mapa);
         }
 
         public ActionResult About()
