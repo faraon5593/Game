@@ -2,10 +2,13 @@
     var Budynki = (List<Game.Models.Buildings>)ViewBag.Budynki;
     var Mapa = (Game.Models.Maps)ViewBag.Mapa;
     var UserProducts = (List<Game.Models.UserProducts>)ViewBag.ProduktyUzytkownika;
+    var UserBuilding = (List<Game.Models.UserBuildings>)ViewBag.BudynkiUzytkownika;
+    
 }
 
 <div class="row">
-    <div class="col-md-12">@Html.Partial("_ProduktyUzytkownika", UserProducts)</div>
     <div class="col-md-2">@Html.Partial("_Budynki", Budynki)</div>
-    <div class="col-md-8">@Html.Partial("_Mapa", Mapa)</div>
+    <div class="col-md-6">@Html.Partial("_Mapa", Mapa)</div>
+    <div class="col-md-4">@Html.Partial("_BudynkiUzytkownika", UserBuilding)</div>
+
 </div>

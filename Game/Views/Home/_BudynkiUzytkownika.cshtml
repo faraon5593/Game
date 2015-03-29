@@ -1,0 +1,12 @@
+﻿@model List<Game.Models.UserBuildings>
+<div class=".col-md-8">
+    <h2>Twoje budynki</h2>
+    <table class="table table-hover">
+        <tr>
+            @foreach (var b in Model)
+            {
+                <td>@b.Building.Name : LvL: @b.Lvl</td>
+            }
+        </tr>
+    </table>
+</div>
