@@ -15,9 +15,11 @@ namespace Game.Controllers
         {
             var mapa = _db.Mapy.Where(r => r.Username == User.Identity.Name).First();
             var budynki = _db.Budynki.ToList();
+            var produktyUzytkownika = _db.ProduktyUzytkownika.Where(r => r.Username == User.Identity.Name).ToList();
             ViewBag.Mapa = mapa;
-           
-            return View(mapa);
+            ViewBag.Budynki = budynki;
+            ViewBag.ProduktyUzytkownika = produktyUzytkownika;
+            return View();
         }
 
         public ActionResult About()

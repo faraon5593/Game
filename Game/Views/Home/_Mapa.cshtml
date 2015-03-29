@@ -1,13 +1,15 @@
 ﻿@model Game.Models.Maps
-<h1>Twoja mapa</h1>
-<table class="mapa">
-    @for (int i = 0; i < Model.Height; i++)
-    {
-        <tr>
-            @for (int j = 0; j < Model.Width; j++)
-            {
-                <td class="mapa_trawa"></td>
-            }
-        </tr>
-    }
-</table>
+<div class=".col-md-4">
+    <h2>Twoja mapa</h2>
+    <table class="mapa">
+        @for (int i = 0; i < Model.Height; i++)
+        {
+            <tr>
+                @for (int j = 0; j < Model.Width; j++)
+                {
+                    <td class="mapa_trawa"></td>
+                }
+            </tr>
+        }
+    </table>
+</div>
