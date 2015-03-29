@@ -9,7 +9,8 @@ namespace Game.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            ContextKey = "Game.Models.dbContext";
         }
 
         protected override void Seed(Game.Models.dbContext context)
