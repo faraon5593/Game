@@ -228,6 +228,7 @@
     <Content Include="Views\Home\_Mapa.cshtml" />
     <Content Include="Views\Home\_Budynki.cshtml" />
     <Content Include="Views\Home\_ProduktyUzytkownika.cshtml" />
+    <Content Include="Views\Home\_BudynkiUzytkownika.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
