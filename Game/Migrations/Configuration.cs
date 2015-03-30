@@ -30,6 +30,11 @@ namespace Game.Migrations
               new Products {  Name = "Wêgiel", Price_per_unit = 30, Unit = "t"},
               new Products {  Name = "Z³oto", Price_per_unit = 100, Unit = "kg" }
             );
+
+            context.ProduktyUzytkownika.AddOrUpdate(
+              p => p.ID,
+              new UserProducts {  Product = context.Produkty.First(), Username = "admin", Value = 10}
+            );
             
         }
     }
